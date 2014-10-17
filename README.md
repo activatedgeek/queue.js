@@ -60,7 +60,8 @@ queue.run();
 function loadJS(uri, callback){
   /* Do something here to update DOM  */
   yourobject.onload = function(){
-    callback.apply(this);
+    callback();
+    //callback.apply(this);
   }
   /* Other stuff  */
 }
