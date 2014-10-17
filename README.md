@@ -7,18 +7,18 @@ Usage
 =====
 
 Declare a new object in the following manner.
-```
+```javascript
 var queue = new MethodQueue();
 ```
 
 Use the run method to start the executing the queue.
-```
+```javascript
 queue.run();
 ```
 
 
 Objects in a special format must be enqueued. Use the following specification
-```
+```javascript
 var item = { 
             fn: yourFunctionName, 
             args: [list,of,arguments]
@@ -32,7 +32,7 @@ queue.enqueue(item);
 Enqueue the items in correct topological sort to prevent errors.
 
 The function prototype must have the following as the last argument:
-```
+```javascript
 /* Call the "callback" argument after the method is over */
 function yourFunctionName(arg1, arg2, ... , argN, callback);
 ```
@@ -44,7 +44,7 @@ NOTE: JQuery UI needs JQuery to be loaded first.
 
 All you need to do is, call the callback function in the onload rule of any asynchronous methods and the trivial last function call in standard methods.
 
-```
+```javascript
 var jsLibs = ["https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js",
 			        "http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"
 			       ];
